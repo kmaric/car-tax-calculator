@@ -40,26 +40,26 @@
 </head>
 
 <body>
-
+    
     <!-- Calculator -->
-    <div class="container" id="calculator-wrapper">
-        <div class="row">
+    <div class="container">
+        <div class="row d-flex justify-content-center" id="calculator-wrapper">
             <div class="col-xs-12">
-                <form id="calculatorForm" action="/" method="post">
+                <form id="calculatorForm" class="form-horizontal" method="post">
                     <div class="form-group row">
-                        <div class="col-sm-12">
+                        <div class="col-sm-6 split">
                             <div class="row">
-                                <div class="col-sm-6 split">
-                                    <label for="kw" class="col-sm-2 col-form-label block">kW</label>
-                                    <div class="col-sm-10 block">
-                                        <input type="text" id="kw" class="number" name="kw" min="0" pattern="[0-9]+([\.,][0-9]+)?" step="0.01" placeholder="0.00">
-                                    </div>
+                                <label for="ps" class="col-sm-2 col-form-label block">kW</label>                  
+                                <div class="col-sm-10 block">
+                                    <input type="text" id="kw" class="number" name="kw" min="0" pattern="[0-9]+([\.,][0-9]+)?" step="0.01" placeholder="0.00">
                                 </div>
-                                <div class="col-sm-6 split">
-                                    <label for="ps" class="col-sm-2 col-form-label block">PS</label>
-                                    <div class="col-sm-10 block">
-                                        <input type="text" id="ps" class="number" name="ps" min="0" pattern="[0-9]+([\.,][0-9]+)?" step="0.01" placeholder="0.00">
-                                    </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 split">
+                            <div class="row">
+                                <label for="ps" class="col-sm-2 col-form-label block">PS</label>
+                                <div class="col-sm-10 block">
+                                    <input type="text" id="ps" class="number" name="ps" min="0" pattern="[0-9]+([\.,][0-9]+)?" step="0.01" placeholder="0.00">
                                 </div>
                             </div>
                         </div>
@@ -87,7 +87,8 @@
                 <div id="result">
                     <div class="row">
                         <div class="col-sm-12">
-                            Result
+                            <div class="divider"></div>
+                            <b>Result</b>
                         </div>
                     </div>
                     <br>
@@ -99,7 +100,7 @@
                         </div>
                         <div class="col-sm-10 vertical">
                             <span class="input-group-text">€</span>
-                            <input type="text" id="amount" readonly/>
+                            <b><input type="text" id="amount" readonly/></b>
                             <span class="input-group-text result-appendix"></span>
                         </div>
                     </div>
